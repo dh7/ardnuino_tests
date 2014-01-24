@@ -9,6 +9,7 @@
 // give it a name:
 int led_green = 12;
 int led_red = 13;
+int delay_ms = 250;
 
 // the setup routine runs once when you press reset:
 void setup() {                
@@ -19,8 +20,10 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);               // wait for a second
-  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);               // wait for a second
+  digitalWrite(led_green, HIGH);
+  digitalWrite(led_red, LOW);
+  delay(delay_ms); 
+  digitalWrite(led_green, LOW);
+  digitalWrite(led_red, HIGH);
+  delay(delay_ms);
 }
